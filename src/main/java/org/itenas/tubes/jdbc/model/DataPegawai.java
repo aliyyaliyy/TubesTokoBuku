@@ -23,7 +23,7 @@ public class DataPegawai {
         this.posisi = posisi;
         this.password = password;
     }
-    
+
     public String generatePassword() {      //dibuat public agar bisa dipake di class lain
         int length = 8; 
         String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -73,6 +73,10 @@ public class DataPegawai {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     

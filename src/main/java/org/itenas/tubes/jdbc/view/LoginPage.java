@@ -15,6 +15,8 @@ import javax.swing.JOptionPane;
 import org.itenas.tubes.jdbc.repository.ControllerLogin;
 import org.itenas.tubes.jdbc.utils.ConnectionManager;
 import org.itenas.tubes.jdbc.view.MenuAdmin;
+import org.itenas.tubes.jdbc.view.MenuOwner;
+import org.itenas.tubes.jdbc.view.MenuKasir;
 
 public class LoginPage extends javax.swing.JFrame {
 
@@ -182,14 +184,16 @@ public class LoginPage extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Login berhasil sebagai " + posisi + "!");
             switch (posisi) {
                 case "Owner":
-                    // Logic untuk Owner
+                    new MenuOwner().setVisible(true);
+                    this.dispose();
                     break;
                 case "Admin":
                     new MenuAdmin().setVisible(true);
                     this.dispose();
                 break;
                 case "Kasir":
-                    // Logic untuk Kasir
+                    new MenuKasir().setVisible(true);
+                    this.dispose();
                 break;
                 default:
                     JOptionPane.showMessageDialog(null, "Posisi tidak valid!", "Error", JOptionPane.ERROR_MESSAGE);

@@ -16,6 +16,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import org.itenas.tubes.jdbc.enums.Posisi;
 import org.itenas.tubes.jdbc.model.DataPegawai;
 import org.itenas.tubes.jdbc.repository.ControllerDataPegawai;
 import org.itenas.tubes.jdbc.view.MenuAdmin;

@@ -16,6 +16,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import org.itenas.tubes.jdbc.utils.ConnectionManager;
 import org.itenas.tubes.jdbc.model.DataPegawai;
+import org.itenas.tubes.jdbc.utils.Session;
 
 public class ControllerLogin {
     
@@ -32,6 +33,7 @@ public class ControllerLogin {
 
             try (ResultSet rs = statement.executeQuery()) {
                 if (rs.next()) {
+                    Session.idPegawai = rs.getInt("idPegawai");
                     isUserValid = true; // Data valid
                 }
             }

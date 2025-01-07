@@ -5,9 +5,13 @@ package org.itenas.tubes.jdbc.view;
  * @author MyBook Z Series
  */
 
+import org.itenas.tubes.jdbc.model.DataPegawai;
 import org.itenas.tubes.jdbc.view.LoginPage;
 import org.itenas.tubes.jdbc.view.KelolaDataPegawai;
 import org.itenas.tubes.jdbc.view.MenuAdmin;
+import org.itenas.tubes.jdbc.view.LaporanDataPegawai;
+import org.itenas.tubes.jdbc.view.LaporanDaftarBuku;
+
 
 public class MenuAdmin extends javax.swing.JFrame {
 
@@ -32,8 +36,8 @@ public class MenuAdmin extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnKelolaDataPegawai = new javax.swing.JButton();
         btnKelolaDataBuku = new javax.swing.JButton();
-        btnDataPegawai = new javax.swing.JButton();
-        btnDataBuku = new javax.swing.JButton();
+        btnLaporanDataPegawai = new javax.swing.JButton();
+        btnLaporanDaftarBuku = new javax.swing.JButton();
         btnRiwayat = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
 
@@ -55,7 +59,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(439, 439, 439)
                 .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(456, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,9 +84,19 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
-        btnDataPegawai.setText("Data Pegawai");
+        btnLaporanDataPegawai.setText("Laporan Data Pegawai");
+        btnLaporanDataPegawai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLaporanDataPegawaiActionPerformed(evt);
+            }
+        });
 
-        btnDataBuku.setText("Data Buku");
+        btnLaporanDaftarBuku.setText("Laporan Data Buku");
+        btnLaporanDaftarBuku.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLaporanDaftarBukuActionPerformed(evt);
+            }
+        });
 
         btnRiwayat.setText("Riwayat");
 
@@ -104,41 +118,38 @@ public class MenuAdmin extends javax.swing.JFrame {
                         .addGap(203, 203, 203)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnKelolaDataPegawai, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnDataPegawai, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnLaporanDataPegawai, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(50, 50, 50)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnDataBuku, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnKelolaDataBuku, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnKelolaDataBuku, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnLaporanDaftarBuku, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(470, 470, 470)
-                        .addComponent(btnRiwayat, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(223, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnRiwayat, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(72, 72, 72)
+                        .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(77, 77, 77))))
+                        .addGap(63, 63, 63)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(44, 44, 44)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(199, 199, 199)
+                .addGap(220, 220, 220)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnKelolaDataPegawai, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnKelolaDataBuku, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDataPegawai, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDataBuku, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnLaporanDataPegawai, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLaporanDaftarBuku, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addComponent(btnRiwayat, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(84, 84, 84))
         );
@@ -177,6 +188,27 @@ public class MenuAdmin extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnLogoutActionPerformed
 
+    private void btnLaporanDataPegawaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLaporanDataPegawaiActionPerformed
+        // TODO add your handling code here:
+        LaporanDataPegawai halaman = new LaporanDataPegawai("admin"); // Kirim posisi sebagai parameter
+        halaman.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnLaporanDataPegawaiActionPerformed
+
+    private void btnLaporanDaftarBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLaporanDaftarBukuActionPerformed
+        // TODO add your handling code here:
+        LaporanDaftarBuku halaman = new LaporanDaftarBuku("admin"); // Kirim posisi sebagai parameter
+        halaman.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnLaporanDaftarBukuActionPerformed
+
+    /*public void bukaHalamanDataPegawai() {
+        KelolaDataPegawai halaman = new KelolaDataPegawai("admin"); // Kirim posisi sebagai parameter
+        halaman.setVisible(true);
+        this.dispose(); // Tutup halaman MenuAdmin
+    }*/
+    
+
     /**
      * @param args the command line arguments
      */
@@ -214,10 +246,10 @@ public class MenuAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnDataBuku;
-    private javax.swing.JButton btnDataPegawai;
     private javax.swing.JButton btnKelolaDataBuku;
     private javax.swing.JButton btnKelolaDataPegawai;
+    private javax.swing.JButton btnLaporanDaftarBuku;
+    private javax.swing.JButton btnLaporanDataPegawai;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnRiwayat;
     private javax.swing.JLabel jLabel4;

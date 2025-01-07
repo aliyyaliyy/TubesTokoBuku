@@ -7,7 +7,7 @@ import java.sql.Date;
  * @author MyBook Z Series
  */
 public class DataBuku {
-    private int isbn;
+    private String isbn;
     private String judulBuku;
     private String genre;
     private String pengarang;
@@ -19,7 +19,7 @@ public class DataBuku {
     public DataBuku() {
     }
 
-    public DataBuku(int isbn, String judulBuku, String genre, String pengarang, int tahunTerbit, int harga, int stok, Date tanggalMasuk) {
+    public DataBuku(String isbn, String judulBuku, String genre, String pengarang, int tahunTerbit, int harga, int stok, Date tanggalMasuk) {
         this.isbn = isbn;
         this.judulBuku = judulBuku;
         this.genre = genre;
@@ -30,11 +30,11 @@ public class DataBuku {
         this.tanggalMasuk = tanggalMasuk;
     }
 
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
@@ -93,5 +93,7 @@ public class DataBuku {
     public void setTanggalMasuk(Date tanggalMasuk) {
         this.tanggalMasuk = tanggalMasuk;
     }
+
+
 
 }

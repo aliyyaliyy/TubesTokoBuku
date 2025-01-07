@@ -22,6 +22,9 @@ import org.itenas.tubes.jdbc.model.DataBuku;
 import org.itenas.tubes.jdbc.crud.Crud;
 import org.itenas.tubes.jdbc.utils.ConnectionManager;
 import java.sql.Date;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import org.itenas.tubes.jdbc.view.Transaksi;
 
 public class ControllerDataBuku implements Crud<DataBuku>{
     
@@ -30,10 +33,10 @@ public class ControllerDataBuku implements Crud<DataBuku>{
 
     @Override
     public boolean create(DataBuku buku) {
-        String query = "INSERT INTO dataBuku(noISBN, judulBuku, genre, pengarang, tahunTerbit, harga, stok, tanggalMasuk)"
+        String query = "INSERT INTO databuku(noISBN, judulBuku, genre, pengarang, tahunTerbit, harga, stok, tanggalMasuk)"
                 + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         try  (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, buku.getIsbn());
+            statement.setString(1, buku.getIsbn());
             statement.setString(2, buku.getJudulBuku());
             statement.setString(3, buku.getGenre());
             statement.setString(4, buku.getPengarang());
@@ -59,7 +62,7 @@ public class ControllerDataBuku implements Crud<DataBuku>{
             
             while (resulset.next()) {
                 DataBuku buku = new DataBuku();
-                buku.setIsbn(resulset.getInt("noISBN"));
+                buku.setIsbn(resulset.getString("noISBN"));
                 buku.setJudulBuku(resulset.getString("judulBuku"));
                 buku.setGenre(resulset.getString("genre"));
                 buku.setPengarang(resulset.getString("pengarang"));
@@ -82,7 +85,7 @@ public class ControllerDataBuku implements Crud<DataBuku>{
         String query = "UPDATE databuku SET harga = ? WHERE noISBN = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, buku.getHarga());
-            statement.setInt(2, buku.getIsbn());
+            statement.setString(2, buku.getIsbn());
             
             return statement.executeUpdate() > 0;
         } catch (SQLException ex) {
@@ -95,7 +98,7 @@ public class ControllerDataBuku implements Crud<DataBuku>{
         String query = "UPDATE dataBuku SET stok = ? WHERE noISBN = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, buku.getStok());
-            statement.setInt(2, buku.getIsbn());
+            statement.setString(2, buku.getIsbn());
             
             return statement.executeUpdate() > 0;
         } catch (SQLException ex) {
@@ -105,7 +108,7 @@ public class ControllerDataBuku implements Crud<DataBuku>{
     }
 
     @Override
-    public boolean delete(int idPegawai) {
+    public boolean delete(int idPegawai) { //idPegawai?
         String query = "DELETE FROM dataBuku WHERE noISBN = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, idPegawai);
@@ -152,7 +155,7 @@ public class ControllerDataBuku implements Crud<DataBuku>{
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 DataBuku buku = new DataBuku();
-                buku.setIsbn(resultSet.getInt("noISBN"));
+                buku.setIsbn(resultSet.getString("noISBN"));
                 buku.setJudulBuku(resultSet.getString("judulBuku"));
                 buku.setGenre(resultSet.getString("genre"));
                 buku.setPengarang(resultSet.getString("pengarang"));
@@ -178,5 +181,58 @@ public class ControllerDataBuku implements Crud<DataBuku>{
         }
     }
     
+    //method untuk mengurangi/mengupdate stok buku ketika sudah dibeli 
+    public void updateStokBuku(DefaultTableModel model) {
+        try (Connection conn = ConnectionManager.getConnection()) {
+            String queryUpdateStok = "UPDATE dataBuku SET stok = stok - ? WHERE noISBN = ?";
+            PreparedStatement stmUpdateStok = conn.prepareStatement(queryUpdateStok);
+
+            // Menyiapkan query untuk cek stok
+            String checkStokQuery = "SELECT stok FROM dataBuku WHERE noISBN = ?";
+            PreparedStatement stmCheckStok = conn.prepareStatement(checkStokQuery);
+
+            for (int i = 0; i < model.getRowCount(); i++) {
+                double jumlahBeli = Double.parseDouble(model.getValueAt(i, 3).toString());
+                String noISBN = model.getValueAt(i, 0).toString();
+                
+                // Debugging: Tampilkan nilai noISBN
+                System.out.println("Checking stok for noISBN: " + noISBN);
+
+                // Mengecek stok
+                stmCheckStok.setString(1, noISBN);
+                ResultSet rs = stmCheckStok.executeQuery();
+
+                if (rs.next()) {
+                    int stok = rs.getInt("stok");
+                    if (stok < jumlahBeli) {
+                        JOptionPane.showMessageDialog(null, 
+                            "Stok untuk buku dengan ISBN " + noISBN + " tidak mencukupi!",
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                        continue; // Lewati buku ini
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, 
+                        "Buku dengan ISBN " + noISBN + " tidak ditemukan di database!",
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE);
+                    continue; // Lewati jika noISBN tidak ditemukan
+                }
+                
+                // mengupdate stok
+                stmUpdateStok.setInt(1, (int) jumlahBeli); // Konversi ke integer jika SQL butuh tipe int
+                stmUpdateStok.setString(2, noISBN);
+                stmUpdateStok.executeUpdate();
+
+                int stokBaru = rs.getInt("stok") - (int) jumlahBeli;
+                model.setValueAt(stokBaru, i, 4); // Asumsikan kolom stok ada di index 4
+            }
+            
+            conn.commit();
+            JOptionPane.showMessageDialog(null, "Stok buku berhasil diperbarui!", "Sukses", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Terjadi kesalahan saat memperbarui stok buku\n" + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
     
 }

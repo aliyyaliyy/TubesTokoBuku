@@ -4,16 +4,18 @@ package org.itenas.tubes.jdbc.model;
  *
  * @author MyBook Z Series
  */
+
+import java.util.Date;
 public class Transaksi {
     private int idTransaksi;
-    private int tanggalTransaksi;
+    private Date tanggalTransaksi;
     private int idPegawai;
     private double totalHarga;
 
     public Transaksi() {
     }
 
-    public Transaksi(int idTransaksi, int tanggalTransaksi, int idPegawai, double totalHarga) {
+    public Transaksi(int idTransaksi, Date tanggalTransaksi, int idPegawai, double totalHarga) {
         this.idTransaksi = idTransaksi;
         this.tanggalTransaksi = tanggalTransaksi;
         this.idPegawai = idPegawai;
@@ -28,11 +30,11 @@ public class Transaksi {
         this.idTransaksi = idTransaksi;
     }
 
-    public int getTanggalTransaksi() {
+    public Date getTanggalTransaksi() {
         return tanggalTransaksi;
     }
 
-    public void setTanggalTransaksi(int tanggalTransaksi) {
+    public void setTanggalTransaksi(Date tanggalTransaksi) {
         this.tanggalTransaksi = tanggalTransaksi;
     }
 

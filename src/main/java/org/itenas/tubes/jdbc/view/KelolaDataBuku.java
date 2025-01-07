@@ -421,7 +421,7 @@ public class KelolaDataBuku extends javax.swing.JFrame {
         }
         
         //proses ngambil data dari tabel
-        int isbn = Integer.parseInt(tabelDataBuku.getValueAt(selectedRow, 0).toString());
+        String isbn = tabelDataBuku.getValueAt(selectedRow, 0).toString();
         String judulBuku = tabelDataBuku.getValueAt(selectedRow, 1).toString();
         
         //Opsi yang nanti bakal pengguna pilih
@@ -514,9 +514,8 @@ public class KelolaDataBuku extends javax.swing.JFrame {
             
             //Mengambil inputan dari JTextField yang sudah diisi oleh user
             //untuk yang yeng angka
-            int isbn, tahunTerbit, harga, stok;
+            int tahunTerbit, harga, stok;
             try {
-                isbn = Integer.parseInt(txtNoISBN.getText().trim());
                 tahunTerbit = Integer.parseInt(txtTahunTerbit.getText().trim());
                 harga = Integer.parseInt(txtHarga.getText().trim());
                 stok = Integer.parseInt(txtStok.getText().trim());
@@ -525,6 +524,7 @@ public class KelolaDataBuku extends javax.swing.JFrame {
                 return;
             }
             //untuk string
+            String isbn = txtNoISBN.getText().trim();
             String judulBuku = txtJudulBuku.getText().trim();
             String genre = txtGenre.getText().trim();
             String pengarang = txtPengarang.getText().trim();
