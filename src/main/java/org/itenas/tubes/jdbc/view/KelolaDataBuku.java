@@ -77,13 +77,16 @@ public class KelolaDataBuku extends javax.swing.JFrame {
     
     public void clearData() {
         txtNoISBN.setText("");
+        txtNoISBN.setEditable(true); 
+        txtNoISBN.setEnabled(true);
         txtJudulBuku.setText("");
         txtGenre.setText("");
         txtPengarang.setText("");
         txtTahunTerbit.setText("");
         txtHarga.setText("");
         txtStok.setText("");
-        dateChooserTanggalMasuk.setDate(null); // Reset tanggal
+        dateChooserTanggalMasuk.setDate(null); 
+        txtNoISBN.requestFocus();
     }
 
     /**

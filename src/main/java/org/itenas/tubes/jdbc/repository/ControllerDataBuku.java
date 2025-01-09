@@ -182,56 +182,41 @@ public class ControllerDataBuku implements Crud<DataBuku>{
     }
     
     //method untuk mengurangi/mengupdate stok buku ketika sudah dibeli 
-    public void updateStokBuku(DefaultTableModel model) {
-        try (Connection conn = ConnectionManager.getConnection()) {
-            String queryUpdateStok = "UPDATE dataBuku SET stok = stok - ? WHERE noISBN = ?";
-            PreparedStatement stmUpdateStok = conn.prepareStatement(queryUpdateStok);
-
-            // Menyiapkan query untuk cek stok
-            String checkStokQuery = "SELECT stok FROM dataBuku WHERE noISBN = ?";
-            PreparedStatement stmCheckStok = conn.prepareStatement(checkStokQuery);
-
-            for (int i = 0; i < model.getRowCount(); i++) {
-                double jumlahBeli = Double.parseDouble(model.getValueAt(i, 3).toString());
-                String noISBN = model.getValueAt(i, 0).toString();
-                
-                // Debugging: Tampilkan nilai noISBN
-                System.out.println("Checking stok for noISBN: " + noISBN);
-
-                // Mengecek stok
-                stmCheckStok.setString(1, noISBN);
-                ResultSet rs = stmCheckStok.executeQuery();
-
-                if (rs.next()) {
-                    int stok = rs.getInt("stok");
-                    if (stok < jumlahBeli) {
-                        JOptionPane.showMessageDialog(null, 
-                            "Stok untuk buku dengan ISBN " + noISBN + " tidak mencukupi!",
-                            "Error",
-                            JOptionPane.ERROR_MESSAGE);
-                        continue; // Lewati buku ini
-                    }
-                } else {
-                    JOptionPane.showMessageDialog(null, 
-                        "Buku dengan ISBN " + noISBN + " tidak ditemukan di database!",
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE);
-                    continue; // Lewati jika noISBN tidak ditemukan
-                }
-                
-                // mengupdate stok
-                stmUpdateStok.setInt(1, (int) jumlahBeli); // Konversi ke integer jika SQL butuh tipe int
-                stmUpdateStok.setString(2, noISBN);
-                stmUpdateStok.executeUpdate();
-
-                int stokBaru = rs.getInt("stok") - (int) jumlahBeli;
-                model.setValueAt(stokBaru, i, 4); // Asumsikan kolom stok ada di index 4
+    public void updateStokBuku(int jumlah, String noISBN) {
+        
+        if (jumlah <= 0 || noISBN == null || noISBN.isEmpty()) {
+            System.out.println("Parameter tidak valid: jumlah=" + jumlah + ", noISBN=" + noISBN);
+            return;
+        }
+        
+        try {
+            
+            if (connection == null || connection.isClosed()) {
+                System.out.println("Koneksi database tertutup!");
+                return;
             }
             
-            conn.commit();
-            JOptionPane.showMessageDialog(null, "Stok buku berhasil diperbarui!", "Sukses", JOptionPane.INFORMATION_MESSAGE);
+            // Log parameter untuk debugging
+            System.out.println("Jumlah: " + jumlah);
+            System.out.println("noISBN: " + noISBN);
+            
+            String query = "UPDATE databuku SET stok = stok - ? WHERE noISBN = ?";
+            PreparedStatement stm = connection.prepareStatement(query);
+            stm.setInt(1, jumlah);
+            stm.setString(2, noISBN);
+            
+            int rowsUpdate = stm.executeUpdate();
+            
+            // Logging hasil eksekusi
+            if (rowsUpdate > 0) {
+                System.out.println("Stok berhasil diperbarui untuk noISBN: " + noISBN);
+            } else {
+                System.out.println("Tidak ada baris yang diperbarui. Periksa noISBN: " + noISBN);
+            }
+            
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Terjadi kesalahan saat memperbarui stok buku\n" + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("Error saat mengupdate stok: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
     

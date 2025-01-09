@@ -8,6 +8,7 @@ org\itenas\tubes\jdbc\view\LaporanDataPegawai.class
 org\itenas\tubes\jdbc\view\MenuAdmin.class
 org\itenas\tubes\jdbc\view\Transaksi$2.class
 org\itenas\tubes\jdbc\view\MenuOwner$1.class
+org\itenas\tubes\jdbc\view\Transaksi$13.class
 org\itenas\tubes\jdbc\view\Transaksi$10.class
 org\itenas\tubes\jdbc\view\KelolaDataBuku$4.class
 org\itenas\tubes\jdbc\repository\ControllerDataBuku.class
@@ -56,6 +57,7 @@ org\itenas\tubes\jdbc\view\LoginPage$1.class
 org\itenas\tubes\jdbc\view\Transaksi.class
 org\itenas\tubes\jdbc\view\MenuAdmin$4.class
 org\itenas\tubes\jdbc\view\MenuKasir$4.class
+org\itenas\tubes\jdbc\view\Transaksi$14.class
 org\itenas\tubes\jdbc\view\KelolaDataBuku.class
 org\itenas\tubes\jdbc\view\KelolaDataPegawai.class
 org\itenas\tubes\jdbc\view\KelolaDataBuku$3.class

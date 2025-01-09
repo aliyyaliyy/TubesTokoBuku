@@ -36,6 +36,10 @@ public class Transaksi extends javax.swing.JFrame {
         showDataBukuFromController();
         controllerTransaksi = new ControllerTransaksi();
         controllerDataBuku = new ControllerDataBuku();
+        model = new DefaultTableModel(
+                new Object[][]{},
+                new String[]{"No ISBN", "Judul Buku", "Jumlah Buku", "Total"}
+        );
     }
     
     private void showDataBukuFromController() {
@@ -79,6 +83,15 @@ public class Transaksi extends javax.swing.JFrame {
         }
         
         txtTotalKeseluruhan.setText(String.valueOf(totalKeseluruhan));
+    }
+    
+    private String findNoISBN(DefaultTableModel model, String judulTransaksi) {
+        for (int j = 0; j < model.getRowCount(); j++) {
+            if (judulTransaksi.equals(model.getValueAt(j, 1).toString())) {
+                return model.getValueAt(j, 0).toString();
+            }
+        }
+        return null;
     }
     
     /**
@@ -258,8 +271,18 @@ public class Transaksi extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tabelDataBuku);
 
         btnSearch.setText("Search");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         btnReset.setText("reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -536,6 +559,7 @@ public class Transaksi extends javax.swing.JFrame {
         String bayarStr = txtUangYangDibayar.getText().trim();
         String totalStr = txtTotalKeseluruhan.getText().trim();
         System.out.println("bayarStr: " + bayarStr + ", totalStr: " + totalStr);
+        
 
         // Validasi input kosong
         if (bayarStr.isEmpty() || totalStr.isEmpty()) {
@@ -562,26 +586,44 @@ public class Transaksi extends javax.swing.JFrame {
                 return;
             }
 
-            // Perhitungan kembalian
+            // hitung kembalian
             double kembalian = bayar - totalKeseluruhan;
             System.out.println("Kembalian: " + kembalian);
             txtKembalian.setText(String.valueOf(kembalian));
+            
+            
 
             // Menyimpan transaksi
             DefaultTableModel model = (DefaultTableModel) tabelTransaksi.getModel();
             int idPegawai = 1;
             System.out.println("Menyimpan transaksi...");
             controllerTransaksi.simpenTransaksi(model, totalStr, idPegawai);
-
-            // Memperbarui stok buku
-            System.out.println("Memperbarui stok buku...");
-            controllerDataBuku.updateStokBuku(model);
-
+            
+            DefaultTableModel modelDataBuku = (DefaultTableModel) tabelDataBuku.getModel();
+            //untuk membantu mengurangi stok
+            for (int i = 0; i < model.getRowCount(); i++) {
+                String judulTransaksi = model.getValueAt(i, 1).toString();
+                int jumlah = Integer.parseInt(model.getValueAt(i, 2).toString());
+                
+                String noISBN = findNoISBN(modelDataBuku, judulTransaksi);
+                
+                if (noISBN != null) {
+                    controllerDataBuku.updateStokBuku(jumlah, noISBN);
+                } else {
+                    System.out.println("Error: buku dengan judul '" + judulTransaksi + "' tidak ditemukan.");
+                }
+            }
+           
+                
             // Mereset data transaksi
             model.setRowCount(0);
             txtTotalKeseluruhan.setText("");
             txtUangYangDibayar.setText("");
             txtKembalian.setText("");
+            
+            //dipanggil untuk memperbarui tampilan stok di tabel
+            showDataBukuFromController();
+            
             JOptionPane.showMessageDialog(null, "Transaksi berhasil disimpan!", "Sukses", JOptionPane.INFORMATION_MESSAGE);
         } catch (NumberFormatException nfe) {
             System.out.println("Error: Input tidak valid - " + nfe.getMessage());
@@ -594,6 +636,44 @@ public class Transaksi extends javax.swing.JFrame {
         new MenuKasir().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnKembali1ActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        String keyword = txtSearch.getText().trim();
+        
+        if (keyword.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Masukkan kata kunci untuk menccari buku!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        List<DataBuku> hasilPencarian = conDataBuku.findBook(keyword);
+        
+        if (hasilPencarian.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Buku tidak ditemukan", "Informasi", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            DefaultTableModel model = (DefaultTableModel) tabelDataBuku.getModel();
+            model.setRowCount(0);
+            
+            for (DataBuku buku : hasilPencarian) {
+                Object[] data = {
+                    buku.getIsbn(),
+                    buku.getJudulBuku(),
+                    buku.getGenre(),
+                    buku.getPengarang(),
+                    buku.getTahunTerbit(),
+                    buku.getHarga(),
+                    buku.getStok()
+                };
+                model.addRow(data);
+            }
+        }
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        // TODO add your handling code here:
+        showDataBukuFromController();
+        txtSearch.setText("");
+    }//GEN-LAST:event_btnResetActionPerformed
 
     /**
      * @param args the command line arguments
