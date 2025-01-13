@@ -152,7 +152,7 @@ public class LoginPage extends javax.swing.JFrame {
                 .addComponent(cbShowPass)
                 .addGap(18, 18, 18)
                 .addComponent(btnLogin)
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
             .addComponent(jLabelGambar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
 
@@ -164,7 +164,7 @@ public class LoginPage extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
         );
 
         pack();

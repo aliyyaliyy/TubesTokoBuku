@@ -63,7 +63,6 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
         model.addColumn("Nama Pegawai");
         model.addColumn("Email");
         model.addColumn("Posisi");
-        model.addColumn("Password");
         getData();
     }
 
@@ -88,7 +87,6 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
                 newData.getNamaPegawai(),
                 newData.getEmail(),
                 newData.getPosisi(),
-                newData.getPassword()
             });
         }
     }
@@ -142,13 +140,13 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
 
         tabelDataPegawai.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "ID Pegawai", "Nama Pegawai", "Email", "Posisi", "Password"
+                "ID Pegawai", "Nama Pegawai", "Email", "Posisi"
             }
         ));
         jScrollPane1.setViewportView(tabelDataPegawai);
