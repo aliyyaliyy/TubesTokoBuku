@@ -380,7 +380,7 @@ public class LaporanDaftarBuku extends javax.swing.JFrame {
         if (args.length > 0 && (args[0].equalsIgnoreCase("admin") || args[0].equalsIgnoreCase("owner") || args[0].equalsIgnoreCase("kasir"))) {
             posisiUser = args[0].toLowerCase(); // Atur posisiUser berdasarkan argumen
         } else if (args.length > 0) {
-            System.err.println("Posisi tidak valid. Gunakan 'admin' atau 'owner'.");
+            System.err.println("Posisi tidak valid. Gunakan 'admin', 'owner' atau 'Kasir'.");
             return; // Keluar dari program jika argumen tidak valid
         }
 

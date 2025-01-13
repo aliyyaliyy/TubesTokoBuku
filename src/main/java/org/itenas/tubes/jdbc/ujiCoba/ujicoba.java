@@ -9,7 +9,7 @@ package org.itenas.tubes.jdbc.ujiCoba;
  * @author ASUS
  */
 public class ujicoba {
-    private string ujicoba;
+    private String ujicoba;
     
     
 }

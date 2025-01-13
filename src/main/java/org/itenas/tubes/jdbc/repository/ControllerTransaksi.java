@@ -50,20 +50,21 @@ public class ControllerTransaksi {
                 String judulBuku = model.getValueAt(i, 1).toString();
                 String jumlah = model.getValueAt(i, 2).toString();
                 
-                String queryISBN = "SELECT noISBN FROM databuku WHERE judulBuku = ?";
-                PreparedStatement stmISBN = conn.prepareStatement(queryISBN);
-                stmISBN.setString(1, judulBuku);
-                ResultSet rsISBN = stmISBN.executeQuery();
+                String queryISBNHarga = "SELECT noISBN, harga FROM databuku WHERE judulBuku = ?";
+                PreparedStatement stmISBNHarga = conn.prepareStatement(queryISBNHarga);
+                stmISBNHarga.setString(1, judulBuku);
+                ResultSet rsISBNHarga = stmISBNHarga.executeQuery();
                 
-                if (rsISBN.next()) {
-                    String noISBN = rsISBN.getString("noISBN");
+                if (rsISBNHarga.next()) {
+                    String noISBN = rsISBNHarga.getString("noISBN");
+                    double hargaSatuan = rsISBNHarga.getDouble("harga");
                     
                     //menyimpan detail transaksi
                     stmDetail.setInt(1, idTransaksi);
                     stmDetail.setString(2, noISBN);
                     stmDetail.setInt(3, Integer.parseInt(jumlah));
-                    stmDetail.setDouble(4, Double.parseDouble(model.getValueAt(i, 2).toString())); // Harga satuan
-                    stmDetail.setDouble(5, Double.parseDouble(model.getValueAt(i, 3).toString())); // Subtotal
+                    stmDetail.setDouble(4, hargaSatuan);
+                    stmDetail.setDouble(5, hargaSatuan * Integer.parseInt(jumlah)); // Subtotal
                     stmDetail.addBatch();
                 } else {
                     JOptionPane.showMessageDialog(null, "Buku " + judulBuku + " tidak ditemukan di databuku!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -79,4 +80,52 @@ public class ControllerTransaksi {
             JOptionPane.showMessageDialog(null, "Terjadi kesalahan saat menyimpan transaksi", "Error", JOptionPane.ERROR_MESSAGE);
         }
     } 
+    
+    public void riwayatTransaksi(DefaultTableModel model) {
+        
+        String query = """
+                    Select 
+                       t.tanggalTransaksi AS tanggalTransaksi,
+                       d.idDetail AS idDetailTransaksi,
+                       t.idTransaksi AS idTransaksi,
+                       p.idPegawai AS idPegawai,
+                       p.namaPegawai AS namaPegawai,
+                       d.noISBN AS noISBN,
+                       d.hargaSatuan AS hargaSatunya,
+                       d.jumlah AS jumlahYangDibeli,
+                       d.subtotal AS subtotal
+                    FROM
+                       detailTransaksi d
+                    JOIN
+                       transaksi t ON d.idTransaksi = t.idTransaksi
+                    JOIN 
+                       dataPegawai p ON t.idPegawai = p.idPegawai
+                    ORDER BY
+                       t.tanggalTransaksi, d.idDetail;
+                       """;
+        try (Connection conn = ConnectionManager.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(query);
+                ResultSet rs = stmt.executeQuery()) {
+            
+            System.out.println("Koneksi berhasil, query diekseskusi.");
+            
+            //menambahkan data ke tabel model 
+            while(rs.next()) {
+                model.addRow(new Object[] {
+                    rs.getDate("tanggalTransaksi"),
+                    rs.getInt("idDetailTransaksi"),
+                    rs.getInt("idTransaksi"),
+                    rs.getInt("idPegawai"),
+                    rs.getString("namaPegawai"),
+                    rs.getString("noISBN"),
+                    rs.getDouble("hargaSatunya"),
+                    rs.getInt("jumlahYangDibeli"),
+                    rs.getDouble("subtotal")
+                }); 
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Terjadi Kesalahan saat mengambil data riwayat transaksi", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 }

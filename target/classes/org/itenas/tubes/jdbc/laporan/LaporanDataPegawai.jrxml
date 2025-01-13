@@ -41,58 +41,58 @@
 	<columnHeader>
 		<band height="24" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="111" height="20" uuid="669f9f8a-667c-401b-b9ff-ebdb07cf21e6"/>
+				<reportElement x="0" y="0" width="111" height="20" uuid="c28136ab-a2a0-4cf4-9bd2-a5a275b4185b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[ID Pegawai]]></text>
+				<text><![CDATA[IdPegawai]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="111" y="0" width="111" height="20" uuid="55e6f437-63c1-4ede-8786-7c01dce16ef1"/>
+				<reportElement x="111" y="0" width="111" height="20" uuid="1b376a58-4a23-46e9-82d2-fdff793c98a1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[Nama Pegawai]]></text>
+				<text><![CDATA[namaPegawai]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="222" y="0" width="111" height="20" uuid="d03dce2f-d9d8-463d-80f4-41af63a90a5e"/>
+				<reportElement x="222" y="0" width="111" height="20" uuid="f76107f6-3bc5-452f-a005-1874bc21b419"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[Email]]></text>
+				<text><![CDATA[email]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="444" y="0" width="111" height="20" uuid="c425c7a1-3326-4923-a83e-35028910fdf1"/>
+				<reportElement x="333" y="0" width="111" height="20" uuid="fc54e2c8-5a1c-4573-acd1-aac6606cda90"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[Password]]></text>
+				<text><![CDATA[posisi]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="333" y="0" width="111" height="20" uuid="71efcedb-2d69-48d0-81b2-98a6f56c7f6c"/>
+				<reportElement x="444" y="0" width="111" height="20" uuid="dab7533d-4396-4440-8730-05cc68229a63"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[Posisi]]></text>
+				<text><![CDATA[password]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="32" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="111" height="20" uuid="d27b8641-dabf-463b-b137-0b5b94dbcbbd"/>
+				<reportElement x="0" y="0" width="111" height="20" uuid="d7e08fc2-479b-44bc-bc9c-df4f4e4d50af"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{IdPegawai}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="222" y="0" width="111" height="20" uuid="9cb0d926-6da7-471e-a554-613c962f3b02"/>
+				<reportElement x="111" y="0" width="111" height="20" uuid="b17a146c-8817-40fa-84f5-e06cbbe8cfae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{namaPegawai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="a4e4985f-8b5b-40eb-827a-16990e04547e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="444" y="0" width="111" height="20" uuid="055f03d8-159f-49af-8003-b6a1b823fc8d"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="333" y="0" width="111" height="20" uuid="9be17b9b-c944-4587-b229-33da3af8ff65"/>
+				<reportElement x="333" y="0" width="111" height="20" uuid="bb3b0f6d-b9c5-42ac-8e97-b734af567e56"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{posisi}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="111" y="0" width="111" height="20" uuid="9d7afadf-e6ab-4d42-94e5-e9bbbc41668e"/>
+				<reportElement x="444" y="0" width="111" height="20" uuid="729455b6-7bce-4291-ad93-d4e1e27d0e19"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{namaPegawai}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
@@ -105,11 +105,6 @@
 	</columnFooter>
 	<pageFooter>
 		<band height="53" splitType="Stretch">
-			<staticText>
-				<reportElement x="455" y="0" width="100" height="20" uuid="6e3b8f1e-fd4f-4c56-8b55-4263de983151"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[TANGGAL CETAK]]></text>
-			</staticText>
 			<textField>
 				<reportElement x="0" y="33" width="100" height="20" uuid="a3e7305d-0b59-45fc-b4a2-a03de34f5327"/>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>

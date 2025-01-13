@@ -8,6 +8,7 @@ D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\repository\Cont
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\repository\ControllerDataPegawai.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\repository\ControllerLogin.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\repository\ControllerTransaksi.java
+D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\ujiCoba\ujicoba.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\utils\ConnectionManager.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\utils\Session.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\view\KelolaDataBuku.java
@@ -18,4 +19,5 @@ D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\view\LoginPage.
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\view\MenuAdmin.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\view\MenuKasir.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\view\MenuOwner.java
+D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\view\RiwayatTransaksi.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\view\Transaksi.java

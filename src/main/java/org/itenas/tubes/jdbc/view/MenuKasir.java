@@ -80,6 +80,11 @@ public class MenuKasir extends javax.swing.JFrame {
 
         btnRiwayat.setText("Riwayat");
         btnRiwayat.setPreferredSize(new java.awt.Dimension(318, 60));
+        btnRiwayat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRiwayatActionPerformed(evt);
+            }
+        });
 
         btnLogout.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnLogout.setText("Logout");
@@ -161,6 +166,13 @@ public class MenuKasir extends javax.swing.JFrame {
         new Transaksi().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnTransaksiActionPerformed
+
+    private void btnRiwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRiwayatActionPerformed
+        // TODO add your handling code here:
+        RiwayatTransaksi halaman = new RiwayatTransaksi("kasir");
+        halaman.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRiwayatActionPerformed
 
     /**
      * @param args the command line arguments

@@ -85,6 +85,11 @@ public class MenuOwner extends javax.swing.JFrame {
 
         btnRiwayat.setText("Riwayat");
         btnRiwayat.setPreferredSize(new java.awt.Dimension(318, 60));
+        btnRiwayat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRiwayatActionPerformed(evt);
+            }
+        });
 
         btnLogout.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnLogout.setText("Logout");
@@ -165,6 +170,13 @@ public class MenuOwner extends javax.swing.JFrame {
         halaman.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnLaporanDaftarBukuActionPerformed
+
+    private void btnRiwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRiwayatActionPerformed
+        // TODO add your handling code here:
+        RiwayatTransaksi halaman = new RiwayatTransaksi("owner");
+        halaman.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRiwayatActionPerformed
 
     /*public void bukaHalamanDataPegawai() {
         KelolaDataPegawai halaman = new KelolaDataPegawai("owner"); // Kirim posisi sebagai parameter
