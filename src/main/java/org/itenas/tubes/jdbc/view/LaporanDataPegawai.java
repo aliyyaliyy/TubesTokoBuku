@@ -329,9 +329,6 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
         // Isi report dengan data
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, conn);
 
-        // Tampilkan laporan menggunakan JasperViewer
-            JasperViewer.viewReport(jasperPrint, false);
-
         // Simpan laporan sebagai PDF
             JFileChooser fileChooser = new JFileChooser();
             fileChooser.setDialogTitle("Pilih Lokasi Penyimpanan Laporan");
@@ -345,6 +342,11 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
                 JasperExportManager.exportReportToPdfFile(jasperPrint, fileToSave.getAbsolutePath());
 
                 JOptionPane.showMessageDialog(this, "Laporan berhasil disimpan di: " + fileToSave.getAbsolutePath(), "Sukses", JOptionPane.INFORMATION_MESSAGE);
+                
+                // Tampilkan laporan menggunakan JasperViewer
+                JasperViewer.viewReport(jasperPrint, false);
+            } else {
+                JOptionPane.showMessageDialog(this, "Penyimpanan laporan dibatalkan", "Informasi", JOptionPane.INFORMATION_MESSAGE);
             }
         } catch (JRException ex) {
             ex.printStackTrace();

@@ -21,12 +21,12 @@ org\itenas\tubes\jdbc\view\KelolaDataPegawai$1.class
 org\itenas\tubes\jdbc\view\LaporanDataPegawai$5.class
 org\itenas\tubes\jdbc\view\MenuAdmin$6.class
 org\itenas\tubes\jdbc\view\KelolaDataBuku$1.class
+org\itenas\tubes\jdbc\view\RiwayatTransaksi$5.class
 org\itenas\tubes\jdbc\view\MenuOwner$3.class
 org\itenas\tubes\jdbc\view\Transaksi$4.class
 org\itenas\tubes\jdbc\view\KelolaDataPegawai$3.class
 org\itenas\tubes\jdbc\view\KelolaDataBuku$5.class
 org\itenas\tubes\jdbc\view\MenuKasir$1.class
-org\itenas\tubes\jdbc\cobain\CobaCoba.class
 org\itenas\tubes\jdbc\model\Transaksi.class
 org\itenas\tubes\jdbc\crud\Crud.class
 org\itenas\tubes\jdbc\view\MenuAdmin$2.class
@@ -65,7 +65,6 @@ org\itenas\tubes\jdbc\view\RiwayatTransaksi.class
 org\itenas\tubes\jdbc\view\LoginPage$3.class
 org\itenas\tubes\jdbc\view\MenuKasir.class
 org\itenas\tubes\jdbc\view\KelolaDataBuku$2.class
-org\itenas\tubes\jdbc\ujiCoba\ujicoba.class
 org\itenas\tubes\jdbc\repository\ControllerLogin.class
 org\itenas\tubes\jdbc\view\KelolaDataBuku$9.class
 org\itenas\tubes\jdbc\view\MenuKasir$5.class
