@@ -51,6 +51,9 @@ public class Transaksi extends javax.swing.JFrame {
             model.addRow(new Object[] {
                 buku.getIsbn(),
                 buku.getJudulBuku(),
+                buku.getGenre(),
+                buku.getPengarang(),
+                buku.getTahunTerbit(),
                 buku.getHarga(),
                 buku.getStok()
             });
@@ -132,16 +135,17 @@ public class Transaksi extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(231, 232, 231));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 832));
 
-        jPanel2.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(231, 232, 231));
         jPanel2.setPreferredSize(new java.awt.Dimension(1280, 832));
 
-        jPanel3.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel3.setBackground(new java.awt.Color(44, 100, 133));
         jPanel3.setPreferredSize(new java.awt.Dimension(1131, 70));
 
         jLabel4.setFont(new java.awt.Font("Palatino Linotype", 0, 40)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(231, 232, 231));
         jLabel4.setText("Transaksi");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -183,7 +187,9 @@ public class Transaksi extends javax.swing.JFrame {
             }
         });
 
+        btnBayar.setBackground(new java.awt.Color(44, 100, 133));
         btnBayar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBayar.setForeground(new java.awt.Color(231, 232, 231));
         btnBayar.setText("Bayar");
         btnBayar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +197,9 @@ public class Transaksi extends javax.swing.JFrame {
             }
         });
 
+        Kembalian.setBackground(new java.awt.Color(44, 100, 133));
         Kembalian.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Kembalian.setForeground(new java.awt.Color(231, 232, 231));
         Kembalian.setText("Kembalian");
         Kembalian.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,7 +207,9 @@ public class Transaksi extends javax.swing.JFrame {
             }
         });
 
+        btnCetakStruk.setBackground(new java.awt.Color(44, 100, 133));
         btnCetakStruk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCetakStruk.setForeground(new java.awt.Color(231, 232, 231));
         btnCetakStruk.setText("Cetak Struk");
         btnCetakStruk.setPreferredSize(new java.awt.Dimension(250, 50));
         btnCetakStruk.addActionListener(new java.awt.event.ActionListener() {
@@ -208,7 +218,9 @@ public class Transaksi extends javax.swing.JFrame {
             }
         });
 
+        btnDelete.setBackground(new java.awt.Color(44, 100, 133));
         btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(231, 232, 231));
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,6 +229,7 @@ public class Transaksi extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(44, 100, 133));
         jLabel1.setText("Nama Buku");
 
         txtNamaBuku.addActionListener(new java.awt.event.ActionListener() {
@@ -226,6 +239,7 @@ public class Transaksi extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(44, 100, 133));
         jLabel2.setText("Harga");
         jLabel2.setPreferredSize(new java.awt.Dimension(118, 28));
 
@@ -247,12 +261,16 @@ public class Transaksi extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(44, 100, 133));
         jLabel3.setText("Jumlah");
 
         jLabel5.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(44, 100, 133));
         jLabel5.setText("Total Harga");
 
+        btnAdd.setBackground(new java.awt.Color(44, 100, 133));
         btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(231, 232, 231));
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,7 +278,9 @@ public class Transaksi extends javax.swing.JFrame {
             }
         });
 
+        btnKembali1.setBackground(new java.awt.Color(44, 100, 133));
         btnKembali1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnKembali1.setForeground(new java.awt.Color(231, 232, 231));
         btnKembali1.setText("Kembali");
         btnKembali1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -268,7 +288,9 @@ public class Transaksi extends javax.swing.JFrame {
             }
         });
 
+        btnClear.setBackground(new java.awt.Color(44, 100, 133));
         btnClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(231, 232, 231));
         btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -278,13 +300,13 @@ public class Transaksi extends javax.swing.JFrame {
 
         tabelDataBuku.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "No ISBN", "Judul Buku", "Harga", "Stok"
+                "No ISBN", "Judul Buku", "Genre", "Pengarang", "Tahun Terbit", "Harga", "Stok"
             }
         ));
         tabelDataBuku.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -296,7 +318,9 @@ public class Transaksi extends javax.swing.JFrame {
 
         txtSearch.setPreferredSize(new java.awt.Dimension(72, 22));
 
+        btnSearch.setBackground(new java.awt.Color(44, 100, 133));
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(231, 232, 231));
         btnSearch.setText("SEARCH");
         btnSearch.setPreferredSize(new java.awt.Dimension(76, 23));
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -305,7 +329,9 @@ public class Transaksi extends javax.swing.JFrame {
             }
         });
 
+        btnReset.setBackground(new java.awt.Color(44, 100, 133));
         btnReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(231, 232, 231));
         btnReset.setText("rst");
         btnReset.setPreferredSize(new java.awt.Dimension(76, 23));
         btnReset.addActionListener(new java.awt.event.ActionListener() {
@@ -485,7 +511,7 @@ public class Transaksi extends javax.swing.JFrame {
         int selectedRow = tabelDataBuku.getSelectedRow();
         
         if (selectedRow != -1) {
-            String namaBuku = tabelDataBuku.getValueAt(selectedRow, 1).toString();
+            String namaBuku = tabelDataBuku.getValueAt(selectedRow, 2).toString();
             String harga = tabelDataBuku.getValueAt(selectedRow, 5).toString();
             
             txtNamaBuku.setText(namaBuku);
@@ -541,6 +567,7 @@ public class Transaksi extends javax.swing.JFrame {
         try {
             String namaBuku = txtNamaBuku.getText();
             int jumlah = Integer.parseInt(txtJumlah.getText());
+            double harga = Double.parseDouble(txtHarga.getText());
             double totalHarga = Double.parseDouble(txtTotalHarga.getText());
 
             //melakukan validasi pada inputan

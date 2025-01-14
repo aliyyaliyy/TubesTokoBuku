@@ -113,13 +113,14 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(231, 232, 231));
         jPanel1.setPreferredSize(new java.awt.Dimension(1200, 700));
 
-        jPanel2.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel2.setBackground(new java.awt.Color(44, 100, 133));
         jPanel2.setPreferredSize(new java.awt.Dimension(1131, 70));
 
         jLabel4.setFont(new java.awt.Font("Palatino Linotype", 0, 40)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(231, 232, 231));
         jLabel4.setText("Data Pegawai");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -151,7 +152,9 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tabelDataPegawai);
 
+        btnSearch.setBackground(new java.awt.Color(44, 100, 133));
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(231, 232, 231));
         btnSearch.setText("SEARCH");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,7 +162,9 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnKembali.setBackground(new java.awt.Color(44, 100, 133));
         btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnKembali.setForeground(new java.awt.Color(231, 232, 231));
         btnKembali.setText("Kembali");
         btnKembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,7 +172,9 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnCetakLaporan.setBackground(new java.awt.Color(44, 100, 133));
         btnCetakLaporan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCetakLaporan.setForeground(new java.awt.Color(231, 232, 231));
         btnCetakLaporan.setText("Cetak Laporan");
         btnCetakLaporan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,7 +182,9 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnReset.setBackground(new java.awt.Color(44, 100, 133));
         btnReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(231, 232, 231));
         btnReset.setText("rst");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,11 +208,11 @@ public class LaporanDataPegawai extends javax.swing.JFrame {
                         .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(509, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGap(0, 938, Short.MAX_VALUE)
                                 .addComponent(btnCetakLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1059, Short.MAX_VALUE))

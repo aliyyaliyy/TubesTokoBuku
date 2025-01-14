@@ -113,13 +113,15 @@ public class LaporanDaftarBuku extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(231, 232, 231));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 832));
 
-        jPanel2.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel2.setBackground(new java.awt.Color(44, 100, 133));
         jPanel2.setPreferredSize(new java.awt.Dimension(1131, 70));
 
+        jLabel4.setBackground(new java.awt.Color(44, 100, 133));
         jLabel4.setFont(new java.awt.Font("Palatino Linotype", 0, 40)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(231, 232, 231));
         jLabel4.setText("Daftar Buku");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -129,7 +131,7 @@ public class LaporanDaftarBuku extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(439, 439, 439)
                 .addComponent(jLabel4)
-                .addContainerGap(400, Short.MAX_VALUE))
+                .addContainerGap(404, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,7 +153,9 @@ public class LaporanDaftarBuku extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tabelDataBuku);
 
+        btnSearch.setBackground(new java.awt.Color(44, 100, 133));
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(231, 232, 231));
         btnSearch.setText("SEARCH");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,7 +163,9 @@ public class LaporanDaftarBuku extends javax.swing.JFrame {
             }
         });
 
+        btnReset.setBackground(new java.awt.Color(44, 100, 133));
         btnReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(231, 232, 231));
         btnReset.setText("rst");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,7 +173,9 @@ public class LaporanDaftarBuku extends javax.swing.JFrame {
             }
         });
 
+        btnCetakDaftarBuku.setBackground(new java.awt.Color(44, 100, 133));
         btnCetakDaftarBuku.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCetakDaftarBuku.setForeground(new java.awt.Color(231, 232, 231));
         btnCetakDaftarBuku.setText("Cetak Daftar Buku");
         btnCetakDaftarBuku.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,7 +183,9 @@ public class LaporanDaftarBuku extends javax.swing.JFrame {
             }
         });
 
+        btnKembali.setBackground(new java.awt.Color(44, 100, 133));
         btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnKembali.setForeground(new java.awt.Color(231, 232, 231));
         btnKembali.setText("Kembali");
         btnKembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

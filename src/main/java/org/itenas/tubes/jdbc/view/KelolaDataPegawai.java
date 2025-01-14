@@ -105,13 +105,14 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(231, 232, 231));
         jPanel1.setPreferredSize(new java.awt.Dimension(1200, 700));
 
-        jPanel2.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel2.setBackground(new java.awt.Color(44, 100, 133));
         jPanel2.setPreferredSize(new java.awt.Dimension(1131, 70));
 
         jLabel4.setFont(new java.awt.Font("Palatino Linotype", 0, 40)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(231, 232, 231));
         jLabel4.setText("Kelola Data Pegawai");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -139,6 +140,7 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
         });
 
         jLabel_namaPegawai.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        jLabel_namaPegawai.setForeground(new java.awt.Color(44, 100, 133));
         jLabel_namaPegawai.setText("Nama Pegawai");
 
         comboBoxPosisi.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 14)); // NOI18N
@@ -146,14 +148,18 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
         comboBoxPosisi.setPreferredSize(new java.awt.Dimension(342, 38));
 
         jLabel1.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(44, 100, 133));
         jLabel1.setText("Posisi");
 
         txtEmail.setPreferredSize(new java.awt.Dimension(342, 38));
 
         jLabel2.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(44, 100, 133));
         jLabel2.setText("Email");
 
+        btnClear.setBackground(new java.awt.Color(44, 100, 133));
         btnClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(231, 232, 231));
         btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,7 +180,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tabelDataPegawai);
 
+        btnAdd.setBackground(new java.awt.Color(44, 100, 133));
         btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(231, 232, 231));
         btnAdd.setText("ADD");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,7 +190,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnUpdate.setBackground(new java.awt.Color(44, 100, 133));
         btnUpdate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(231, 232, 231));
         btnUpdate.setText("UPDATE");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,7 +200,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnDelete.setBackground(new java.awt.Color(44, 100, 133));
         btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(231, 232, 231));
         btnDelete.setText("DELETE");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,7 +210,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnSearch.setBackground(new java.awt.Color(44, 100, 133));
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(231, 232, 231));
         btnSearch.setText("SEARCH");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,7 +220,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnKembali.setBackground(new java.awt.Color(44, 100, 133));
         btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnKembali.setForeground(new java.awt.Color(231, 232, 231));
         btnKembali.setText("Kembali");
         btnKembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,7 +230,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnReset.setBackground(new java.awt.Color(44, 100, 133));
         btnReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(231, 232, 231));
         btnReset.setText("rst");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

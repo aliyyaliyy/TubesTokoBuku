@@ -45,13 +45,15 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(231, 232, 231));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 832));
 
-        jPanel2.setBackground(new java.awt.Color(204, 111, 164));
+        jPanel2.setBackground(new java.awt.Color(44, 100, 133));
+        jPanel2.setForeground(new java.awt.Color(231, 232, 231));
         jPanel2.setPreferredSize(new java.awt.Dimension(1131, 70));
 
         jLabel4.setFont(new java.awt.Font("Palatino Linotype", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(231, 232, 231));
         jLabel4.setText("Menu Admin");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -70,7 +72,9 @@ public class MenuAdmin extends javax.swing.JFrame {
                 .addComponent(jLabel4))
         );
 
+        btnKelolaDataPegawai.setBackground(new java.awt.Color(44, 100, 133));
         btnKelolaDataPegawai.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnKelolaDataPegawai.setForeground(new java.awt.Color(231, 232, 231));
         btnKelolaDataPegawai.setText("Kelola Data Pegawai");
         btnKelolaDataPegawai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +82,9 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
+        btnKelolaDataBuku.setBackground(new java.awt.Color(4, 100, 133));
         btnKelolaDataBuku.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnKelolaDataBuku.setForeground(new java.awt.Color(231, 232, 231));
         btnKelolaDataBuku.setText("Kelola Data Buku");
         btnKelolaDataBuku.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +92,9 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
+        btnLaporanDataPegawai.setBackground(new java.awt.Color(4, 100, 133));
         btnLaporanDataPegawai.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnLaporanDataPegawai.setForeground(new java.awt.Color(231, 232, 231));
         btnLaporanDataPegawai.setText("Laporan Data Pegawai");
         btnLaporanDataPegawai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +102,9 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
+        btnLaporanDaftarBuku.setBackground(new java.awt.Color(44, 100, 133));
         btnLaporanDaftarBuku.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnLaporanDaftarBuku.setForeground(new java.awt.Color(231, 232, 231));
         btnLaporanDaftarBuku.setText("Laporan Data Buku");
         btnLaporanDaftarBuku.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +112,9 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
+        btnRiwayat.setBackground(new java.awt.Color(44, 100, 133));
         btnRiwayat.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnRiwayat.setForeground(new java.awt.Color(231, 232, 231));
         btnRiwayat.setText("Riwayat Transaksi");
         btnRiwayat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +122,9 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
+        btnLogout.setBackground(new java.awt.Color(44, 100, 133));
         btnLogout.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnLogout.setForeground(new java.awt.Color(231, 232, 231));
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
