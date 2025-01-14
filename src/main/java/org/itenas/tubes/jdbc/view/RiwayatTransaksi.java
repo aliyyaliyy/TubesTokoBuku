@@ -154,7 +154,7 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
         tabelRiwayatTransaksi.setPreferredSize(new java.awt.Dimension(580, 75));
         jScrollPane1.setViewportView(tabelRiwayatTransaksi);
 
-        ctkRiwayat.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        ctkRiwayat.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         ctkRiwayat.setText("Cetak Riwayat");
         ctkRiwayat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,8 +164,8 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
 
         txtSearch.setMinimumSize(new java.awt.Dimension(72, 22));
 
-        btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        btnSearch.setText("Search");
+        btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSearch.setText("SEARCH");
         btnSearch.setPreferredSize(new java.awt.Dimension(76, 23));
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,21 +173,17 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
             }
         });
 
-<<<<<<< HEAD
-        btnReset.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        btnReset.setText("Reset");
+        btnReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnReset.setText("rst");
         btnReset.setMinimumSize(new java.awt.Dimension(76, 23));
         btnReset.setPreferredSize(new java.awt.Dimension(76, 23));
-=======
-        btnReset.setText("rst");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnResetActionPerformed(evt);
             }
         });
->>>>>>> f8c49de96bc685cafbe608afe392a310f42b13c6
 
-        btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnKembali.setText("Kembali");
         btnKembali.setPreferredSize(new java.awt.Dimension(98, 35));
         btnKembali.addActionListener(new java.awt.event.ActionListener() {
@@ -220,7 +216,7 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(44, 44, 44))
@@ -231,13 +227,14 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(74, 74, 74)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(ctkRiwayat, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
                 .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
