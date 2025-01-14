@@ -26,7 +26,7 @@ import org.itenas.tubes.jdbc.view.MenuAdmin;
 public class KelolaDataBuku extends javax.swing.JFrame {
 
     /**
-     * Creates new form KelolaDataBuku coba 
+     * Creates new form KelolaDataBuku
      */
     
     boolean hasil;
