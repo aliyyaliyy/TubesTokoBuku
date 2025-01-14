@@ -117,7 +117,7 @@ public class KelolaDataBuku extends javax.swing.JFrame {
         txtStok = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        dateChooserTanggalMasuk = new com.toedter.calendar.JDateChooser();
+        dateChooserTanggalMasuk = new org.netbeans.modules.form.InvalidComponent();
         btnClear = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelDataBuku = new javax.swing.JTable();
@@ -139,13 +139,14 @@ public class KelolaDataBuku extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 832));
 
-        jPanel2.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
         jPanel2.setPreferredSize(new java.awt.Dimension(1131, 70));
 
-        jLabel4.setFont(new java.awt.Font("Palatino Linotype", 0, 40)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Palatino Linotype", 1, 40)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Kelola Data Buku");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -689,7 +690,7 @@ public class KelolaDataBuku extends javax.swing.JFrame {
     private javax.swing.JButton btnReset;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
-    private com.toedter.calendar.JDateChooser dateChooserTanggalMasuk;
+    private org.netbeans.modules.form.InvalidComponent dateChooserTanggalMasuk;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

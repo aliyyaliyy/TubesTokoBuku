@@ -37,10 +37,10 @@ public class MenuKasir extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 832));
 
-        jPanel2.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
         jPanel2.setPreferredSize(new java.awt.Dimension(1131, 70));
 
         jLabel4.setFont(new java.awt.Font("Palatino Linotype", 0, 40)); // NOI18N
@@ -53,7 +53,7 @@ public class MenuKasir extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(439, 439, 439)
                 .addComponent(jLabel4)
-                .addContainerGap(488, Short.MAX_VALUE))
+                .addContainerGap(485, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -138,10 +138,10 @@ public class Transaksi extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 153, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 832));
 
-        jPanel2.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setPreferredSize(new java.awt.Dimension(1280, 832));
 
-        jPanel3.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel3.setBackground(new java.awt.Color(0, 102, 102));
         jPanel3.setPreferredSize(new java.awt.Dimension(1131, 70));
 
         jLabel4.setFont(new java.awt.Font("Palatino Linotype", 0, 40)); // NOI18N

@@ -105,13 +105,16 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(231, 232, 231));
+        jPanel1.setForeground(new java.awt.Color(44, 100, 133));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 832));
 
-        jPanel2.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel2.setBackground(new java.awt.Color(44, 100, 133));
         jPanel2.setPreferredSize(new java.awt.Dimension(1131, 70));
 
-        jLabel4.setFont(new java.awt.Font("Palatino Linotype", 0, 40)); // NOI18N
+        jLabel4.setBackground(new java.awt.Color(0, 153, 153));
+        jLabel4.setFont(new java.awt.Font("Palatino Linotype", 1, 40)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(231, 232, 231));
         jLabel4.setText("Kelola Data Pegawai");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -139,6 +142,7 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
         });
 
         jLabel_namaPegawai.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        jLabel_namaPegawai.setForeground(new java.awt.Color(44, 100, 133));
         jLabel_namaPegawai.setText("Nama Pegawai");
 
         comboBoxPosisi.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 14)); // NOI18N
@@ -146,14 +150,18 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
         comboBoxPosisi.setPreferredSize(new java.awt.Dimension(342, 38));
 
         jLabel1.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(44, 100, 133));
         jLabel1.setText("Posisi");
 
         txtEmail.setPreferredSize(new java.awt.Dimension(342, 38));
 
         jLabel2.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(44, 100, 133));
         jLabel2.setText("Email");
 
+        btnClear.setBackground(new java.awt.Color(44, 100, 133));
         btnClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(231, 232, 231));
         btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,6 +169,7 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        tabelDataPegawai.setForeground(new java.awt.Color(231, 232, 231));
         tabelDataPegawai.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -174,7 +183,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tabelDataPegawai);
 
+        btnAdd.setBackground(new java.awt.Color(44, 100, 133));
         btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(231, 232, 231));
         btnAdd.setText("ADD");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,7 +193,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnUpdate.setBackground(new java.awt.Color(44, 100, 133));
         btnUpdate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(231, 232, 231));
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,7 +203,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnDelete.setBackground(new java.awt.Color(44, 100, 133));
         btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(231, 232, 231));
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,7 +213,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnSearch.setBackground(new java.awt.Color(44, 100, 133));
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(231, 232, 231));
         btnSearch.setText("Search");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,7 +223,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnKembali.setBackground(new java.awt.Color(44, 100, 133));
         btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnKembali.setForeground(new java.awt.Color(231, 232, 231));
         btnKembali.setText("Kembali");
         btnKembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,7 +233,9 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
             }
         });
 
+        btnReset.setBackground(new java.awt.Color(44, 100, 133));
         btnReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(231, 232, 231));
         btnReset.setText("rst");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,7 +279,7 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
                             .addComponent(jLabel_namaPegawai)
                             .addComponent(txtNamaPegawai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(comboBoxPosisi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 232, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -286,7 +307,7 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
                         .addComponent(jLabel1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(comboBoxPosisi, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
+                .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -298,7 +319,7 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -306,7 +327,7 @@ public class KelolaDataPegawai extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1226, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
