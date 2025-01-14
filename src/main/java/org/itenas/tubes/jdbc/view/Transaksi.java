@@ -249,7 +249,7 @@ public class Transaksi extends javax.swing.JFrame {
         jLabel5.setText("Total Harga");
 
         btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        btnAdd.setText("ADD");
+        btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
