@@ -42,13 +42,15 @@ public class MenuOwner extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(231, 232, 231));
+        jPanel1.setForeground(new java.awt.Color(44, 100, 133));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 832));
 
-        jPanel2.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel2.setBackground(new java.awt.Color(44, 100, 133));
         jPanel2.setPreferredSize(new java.awt.Dimension(1131, 70));
 
         jLabel4.setFont(new java.awt.Font("Palatino Linotype", 0, 40)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(231, 232, 231));
         jLabel4.setText("Menu Owner");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -58,7 +60,7 @@ public class MenuOwner extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(439, 439, 439)
                 .addComponent(jLabel4)
-                .addContainerGap(458, Short.MAX_VALUE))
+                .addContainerGap(454, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,6 +69,8 @@ public class MenuOwner extends javax.swing.JFrame {
                 .addComponent(jLabel4))
         );
 
+        btnLaporanDataPegawai.setBackground(new java.awt.Color(44, 100, 133));
+        btnLaporanDataPegawai.setForeground(new java.awt.Color(231, 232, 231));
         btnLaporanDataPegawai.setText("Laporan Data Pegawai");
         btnLaporanDataPegawai.setPreferredSize(new java.awt.Dimension(318, 60));
         btnLaporanDataPegawai.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +79,8 @@ public class MenuOwner extends javax.swing.JFrame {
             }
         });
 
+        btnLaporanDaftarBuku.setBackground(new java.awt.Color(44, 100, 133));
+        btnLaporanDaftarBuku.setForeground(new java.awt.Color(231, 232, 231));
         btnLaporanDaftarBuku.setText("Laporan Daftar Buku");
         btnLaporanDaftarBuku.setPreferredSize(new java.awt.Dimension(318, 60));
         btnLaporanDaftarBuku.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +89,8 @@ public class MenuOwner extends javax.swing.JFrame {
             }
         });
 
+        btnRiwayat.setBackground(new java.awt.Color(44, 100, 133));
+        btnRiwayat.setForeground(new java.awt.Color(231, 232, 231));
         btnRiwayat.setText("Riwayat");
         btnRiwayat.setPreferredSize(new java.awt.Dimension(318, 60));
         btnRiwayat.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +99,9 @@ public class MenuOwner extends javax.swing.JFrame {
             }
         });
 
+        btnLogout.setBackground(new java.awt.Color(44, 100, 133));
         btnLogout.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnLogout.setForeground(new java.awt.Color(231, 232, 231));
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

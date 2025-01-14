@@ -113,12 +113,14 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(231, 232, 231));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 832));
 
+        jPanel2.setBackground(new java.awt.Color(44, 100, 133));
         jPanel2.setPreferredSize(new java.awt.Dimension(1130, 70));
 
         jLabel1.setFont(new java.awt.Font("Palatino Linotype", 1, 40)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(231, 232, 231));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Riwayat Transaksi");
         jLabel1.setAlignmentX(0.5F);
@@ -154,7 +156,9 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
         tabelRiwayatTransaksi.setPreferredSize(new java.awt.Dimension(580, 75));
         jScrollPane1.setViewportView(tabelRiwayatTransaksi);
 
+        ctkRiwayat.setBackground(new java.awt.Color(44, 100, 133));
         ctkRiwayat.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ctkRiwayat.setForeground(new java.awt.Color(231, 232, 231));
         ctkRiwayat.setText("Cetak Riwayat");
         ctkRiwayat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +168,9 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
 
         txtSearch.setMinimumSize(new java.awt.Dimension(72, 22));
 
+        btnSearch.setBackground(new java.awt.Color(44, 100, 133));
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(231, 232, 231));
         btnSearch.setText("SEARCH");
         btnSearch.setPreferredSize(new java.awt.Dimension(76, 23));
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -173,7 +179,9 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
             }
         });
 
+        btnReset.setBackground(new java.awt.Color(44, 100, 133));
         btnReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(231, 232, 231));
         btnReset.setText("rst");
         btnReset.setMinimumSize(new java.awt.Dimension(76, 23));
         btnReset.setPreferredSize(new java.awt.Dimension(76, 23));
@@ -183,7 +191,9 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
             }
         });
 
+        btnKembali.setBackground(new java.awt.Color(44, 100, 133));
         btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnKembali.setForeground(new java.awt.Color(231, 232, 231));
         btnKembali.setText("Kembali");
         btnKembali.setPreferredSize(new java.awt.Dimension(98, 35));
         btnKembali.addActionListener(new java.awt.event.ActionListener() {
@@ -218,7 +228,7 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addGap(0, 535, Short.MAX_VALUE)))))
                 .addGap(44, 44, 44))
         );
         jPanel1Layout.setVerticalGroup(
