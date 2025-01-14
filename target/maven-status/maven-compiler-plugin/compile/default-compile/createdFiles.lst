@@ -57,6 +57,7 @@ org\itenas\tubes\jdbc\view\MenuOwner.class
 org\itenas\tubes\jdbc\view\Transaksi$6.class
 org\itenas\tubes\jdbc\view\KelolaDataPegawai$8.class
 org\itenas\tubes\jdbc\view\LaporanDaftarBuku$4.class
+org\itenas\tubes\jdbc\view\Transaksi$17.class
 org\itenas\tubes\jdbc\view\RiwayatTransaksi$3.class
 org\itenas\tubes\jdbc\view\KelolaDataPegawai$5.class
 org\itenas\tubes\jdbc\view\Transaksi$3.class

@@ -151,7 +151,7 @@ public class Transaksi extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(479, 479, 479)
                 .addComponent(jLabel4)
-                .addContainerGap(405, Short.MAX_VALUE))
+                .addContainerGap(408, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,6 +237,12 @@ public class Transaksi extends javax.swing.JFrame {
         txtJumlah.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtJumlahKeyReleased(evt);
+            }
+        });
+
+        txtTotalHarga.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTotalHargaActionPerformed(evt);
             }
         });
 
@@ -712,6 +718,10 @@ public class Transaksi extends javax.swing.JFrame {
     private void KembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KembalianActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_KembalianActionPerformed
+
+    private void txtTotalHargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalHargaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTotalHargaActionPerformed
 
     /**
      * @param args the command line arguments
