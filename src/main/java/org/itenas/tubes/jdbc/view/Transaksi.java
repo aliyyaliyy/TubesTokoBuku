@@ -22,7 +22,7 @@ import org.itenas.tubes.jdbc.repository.ControllerTransaksi;
 public class Transaksi extends javax.swing.JFrame {
 
     /**
-     * Creates new form Transaksi
+     * Creates new form Transaksi mencoba 
      */
     
     ControllerDataBuku conDataBuku = new ControllerDataBuku();
