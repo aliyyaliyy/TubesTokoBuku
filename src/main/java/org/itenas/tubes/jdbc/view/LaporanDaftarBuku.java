@@ -322,8 +322,7 @@ public class LaporanDaftarBuku extends javax.swing.JFrame {
             //mengisi report dengan dataa
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, conn);
             
-            //Menampilkan laporan dengan menggunakan JasperViewer
-            JasperViewer.viewReport(jasperPrint, false);
+            
             
             //Menyimpan laporan sebagai pdf
             JFileChooser fileChooser = new JFileChooser();
@@ -337,7 +336,12 @@ public class LaporanDaftarBuku extends javax.swing.JFrame {
                 //Mengekspor laporan ke file PDF
                 JasperExportManager.exportReportToPdfFile(jasperPrint, fileToSave.getAbsolutePath());
                 JOptionPane.showMessageDialog(this, "Laporan berhasil disimpan di : " + fileToSave.getAbsolutePath(), "Sukses", JOptionPane.INFORMATION_MESSAGE);
-            } 
+                
+                //Menampilkan laporan dengan menggunakan JasperViewer
+                JasperViewer.viewReport(jasperPrint, false);
+            } else {
+                JOptionPane.showMessageDialog(this, "Penyimpanan laporan dibatalkan", "Informasi", JOptionPane.INFORMATION_MESSAGE);
+            }
         } catch (JRException ex) {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(this, "Gagal mencetak laporan: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);

@@ -1,4 +1,3 @@
-D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\cobain\CobaCoba.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\crud\Crud.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\enums\Posisi.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\model\DataBuku.java
@@ -9,7 +8,6 @@ D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\repository\Cont
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\repository\ControllerDataPegawai.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\repository\ControllerLogin.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\repository\ControllerTransaksi.java
-D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\ujiCoba\ujicoba.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\utils\ConnectionManager.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\utils\Session.java
 D:\19. PBO\00.Tubes\TokoBuku\src\main\java\org\itenas\tubes\jdbc\view\KelolaDataBuku.java

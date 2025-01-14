@@ -1,10 +1,29 @@
 package org.itenas.tubes.jdbc.view;
 
+import com.sun.jdi.connect.Connector;
 import java.awt.HeadlessException;
+import java.io.File;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.view.JasperViewer;
 import org.itenas.tubes.jdbc.repository.ControllerTransaksi;
+import org.itenas.tubes.jdbc.utils.ConnectionManager;
+
 
 /**
  *
@@ -154,10 +173,19 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         btnReset.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnReset.setText("Reset");
         btnReset.setMinimumSize(new java.awt.Dimension(76, 23));
         btnReset.setPreferredSize(new java.awt.Dimension(76, 23));
+=======
+        btnReset.setText("rst");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
+>>>>>>> f8c49de96bc685cafbe608afe392a310f42b13c6
 
         btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnKembali.setText("Kembali");
@@ -234,10 +262,62 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
 
     private void ctkRiwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ctkRiwayatActionPerformed
         // TODO add your handling code here:
+        try {
+            InputStream input = getClass().getClassLoader().getResourceAsStream("org/itenas/tubes/jdbc/laporan/RiwayatTransaksi.jrxml");
+            
+            System.out.println("Resource Path: " + getClass().getClassLoader().getResource("org/itenas/tubes/jdbc/laporan/RiwayatTransaksi.jrxml"));
+            
+            //Pengecekan File
+            if (input == null) {
+                JOptionPane.showMessageDialog(this, "File RiwayatTransaksi.jrxml tidak ditemukan.", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            
+            //Kompilasi laporan
+            JasperReport jasperReport = JasperCompileManager.compileReport(input);
+            
+            //koneksi ke database
+            Connection conn = ConnectionManager.getConnection();
+            
+            //
+            Map<String, Object> parameters = new HashMap<>();
+            
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, conn);
+            
+            
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setDialogTitle("Pilih Lokasi Penyimpanan Laporan");
+            fileChooser.setSelectedFile(new File("RiwayatTransaksi.pdf"));
+            
+            int userSelection = fileChooser.showSaveDialog(this);
+            if (userSelection == JFileChooser.APPROVE_OPTION) {
+                File fileToSave = fileChooser.getSelectedFile();
+                
+                JasperExportManager.exportReportToPdfFile(jasperPrint, fileToSave.getAbsolutePath());
+                
+                JOptionPane.showMessageDialog(this, "Laporan transaksi berhasil disimpan di:  " + fileToSave.getAbsolutePath(), "Sukses", JOptionPane.INFORMATION_MESSAGE);
+                
+                //Menampilkan laporan di jaspervieweer setelah file disimpan
+                JasperViewer.viewReport(jasperPrint, false);
+            } else {
+                JOptionPane.showMessageDialog(this, "Penyimpanan laporan Riwayat Transaksi dibatalkan", "Informasi", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (JRException je) {
+            JOptionPane.showMessageDialog(this, "Gagal mencetak : " + je.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException se) {
+            Logger.getLogger(LaporanDataPegawai.class.getName()).log(Level.SEVERE, null, se);
+        }
     }//GEN-LAST:event_ctkRiwayatActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
+        String keyword = txtSearch.getText().trim();
+        
+        DefaultTableModel model = (DefaultTableModel) tabelRiwayatTransaksi.getModel();
+        
+        //Memanggil method search yang ada di controllerTransaksi
+        ControllerTransaksi controller = new ControllerTransaksi();
+        controller.searchRiwayatTransaksi(keyword, model);
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
@@ -251,6 +331,12 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
         }
         this.dispose();
     }//GEN-LAST:event_btnKembaliActionPerformed
+
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        // TODO add your handling code here:
+        getData();
+        txtSearch.setText("");
+    }//GEN-LAST:event_btnResetActionPerformed
 
     /**
      * @param args the command line arguments

@@ -51,9 +51,6 @@ public class Transaksi extends javax.swing.JFrame {
             model.addRow(new Object[] {
                 buku.getIsbn(),
                 buku.getJudulBuku(),
-                buku.getGenre(),
-                buku.getPengarang(),
-                buku.getTahunTerbit(),
                 buku.getHarga(),
                 buku.getStok()
             });
@@ -274,13 +271,13 @@ public class Transaksi extends javax.swing.JFrame {
 
         tabelDataBuku.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "No ISBN", "Judul Buku", "Genre", "Pengarang", "Tahun Terbit", "Harga", "Stok"
+                "No ISBN", "Judul Buku", "Harga", "Stok"
             }
         ));
         tabelDataBuku.addMouseListener(new java.awt.event.MouseAdapter() {

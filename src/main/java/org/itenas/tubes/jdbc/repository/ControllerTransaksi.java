@@ -128,4 +128,67 @@ public class ControllerTransaksi {
             JOptionPane.showMessageDialog(null, "Terjadi Kesalahan saat mengambil data riwayat transaksi", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+    
+    public void searchRiwayatTransaksi(String keyword, DefaultTableModel model) {
+        String query = """
+                        SELECT
+                            t.tanggalTransaksi AS tanggalTransaksi,
+                            d.idDetail AS idDetailTransaksi,
+                            t.idTransaksi AS idTransaksi,
+                            p.idPegawai AS idPegawai,
+                            p.namaPegawai AS namaPegawai,
+                            d.noISBN AS noISBN,
+                            d.hargaSatuan AS hargaSatunya,
+                            d.jumlah AS jumlahYangDibeli,
+                            d.subtotal AS subtotal
+                        FROM
+                            detailTransaksi d
+                        JOIN 
+                            transaksi t ON d.idTransaksi = t.idTransaksi
+                        JOIN
+                            dataPegawai p ON t.idPegawai = p.idPegawai
+                        WHERE
+                            t.tanggalTransaksi LIKE ? OR
+                            d.idDetail LIKE ? OR
+                            t.idTransaksi LIKE ? OR
+                            p.idPegawai LIKE ? OR
+                            p.namaPegawai LIKE ? OR
+                            d.noISBN LIKE ? OR
+                            d.hargaSatuan LIKE ? OR
+                            d.jumlah LIKE ? OR
+                            d.subtotal LIKE ?
+                        ORDER BY
+                            t.tanggalTransaksi, d.idDetail;
+                       """;
+        try (Connection conn = ConnectionManager.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(query)) {
+            
+            //Menambahkan wildcard ke keyword untuk pencarian LIKE
+            String keywordWithWildCard = "%" + keyword + "%";
+            for (int i = 1; i <= 9; i++) {
+                stmt.setString(i, keywordWithWildCard);
+            }
+            
+            try (ResultSet rs = stmt.executeQuery()) {
+                model.setRowCount(0);
+                
+                while (rs.next()) {
+                    model.addRow(new Object[] {
+                        rs.getDate("tanggalTransaksi"),
+                        rs.getInt("idDetailTransaksi"),
+                        rs.getInt("idTransaksi"),
+                        rs.getInt("idPegawai"),
+                        rs.getString("namaPegawai"),
+                        rs.getString("noISBN"),
+                        rs.getDouble("hargaSatunya"),
+                        rs.getInt("jumlahYangDibeli"),
+                        rs.getDouble("subtotal")
+                    });
+                }
+            } 
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Terjadi kesalahan saat mencari data", "Error", JOptionPane.ERROR_MESSAGE);
+       }
+    }
 }
