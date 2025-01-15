@@ -150,7 +150,6 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
                 "Tanggal Transaksi", "ID Detail Transaksi", "ID Transaksi", "ID Pegawai", "Nama Pegawai", "No ISBN ", "Harga Satuan", "Jumlah Yang Dibeli", "Subtotal"
             }
         ));
-        tabelRiwayatTransaksi.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         tabelRiwayatTransaksi.setPreferredSize(new java.awt.Dimension(580, 75));
         jScrollPane1.setViewportView(tabelRiwayatTransaksi);
 

@@ -201,7 +201,6 @@
                     <Column editable="true" title="Subtotal" type="java.lang.Object"/>
                   </Table>
                 </Property>
-                <Property name="autoResizeMode" type="int" value="4"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[580, 75]"/>
                 </Property>
