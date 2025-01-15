@@ -125,7 +125,9 @@ public class ControllerDataBuku implements Crud<DataBuku>{
         List<DataBuku> listBuku = new ArrayList<>();
     
         // Query untuk pencarian berdasarkan berbagai kolom
-        String query = "SELECT * FROM dataBuku WHERE noISBN LIKE ? OR judulBuku LIKE ? OR genre LIKE ? OR pengarang LIKE ? OR tahunTerbit LIKE ? OR harga LIKE ? OR stok LIKE ? OR tanggalMasuk LIKE ?";
+        String query = "SELECT * FROM dataBuku WHERE " +
+                   "noISBN LIKE ? OR judulBuku LIKE ? OR genre LIKE ? OR pengarang LIKE ? OR " +
+                   "tahunTerbit LIKE ? OR harga LIKE ? OR stok LIKE ? OR tanggalMasuk LIKE ?";
 
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             // Pertama, cek apakah keyword adalah angka

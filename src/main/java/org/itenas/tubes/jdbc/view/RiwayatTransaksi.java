@@ -60,7 +60,7 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
         
         model.addColumn("Tanggal Transaksi");
         model.addColumn("ID Detail Transaksi");
-        model.addColumn("ID Transaki");
+        model.addColumn("ID Transaksi");
         model.addColumn("ID Pegawai");
         model.addColumn("Nama Pegawai");
         model.addColumn("No ISBN");
@@ -98,6 +98,7 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
         txtSearch = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
         btnKembali = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -143,15 +144,13 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
 
         tabelRiwayatTransaksi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Tanggal Transaksi", "ID Detail Transaksi", "ID Transaksi", "ID Pegawai", "Nama Pegawai", "No ISBN ", "Harga Satuan", "Jumlah Yang Dibeli", "Subtotal"
             }
         ));
+        tabelRiwayatTransaksi.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         tabelRiwayatTransaksi.setPreferredSize(new java.awt.Dimension(580, 75));
         jScrollPane1.setViewportView(tabelRiwayatTransaksi);
 
@@ -189,6 +188,16 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
             }
         });
 
+        btnReset.setBackground(new java.awt.Color(44, 100, 133));
+        btnReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(231, 232, 231));
+        btnReset.setText("Reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -208,12 +217,14 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
                             .addComponent(jScrollPane1)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 603, Short.MAX_VALUE)))))
+                                        .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(44, 44, 44))
         );
         jPanel1Layout.setVerticalGroup(
@@ -221,17 +232,22 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ctkRiwayat, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
+                .addGap(37, 37, 37))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -322,6 +338,12 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnKembaliActionPerformed
 
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        // TODO add your handling code here:
+        getData();
+        txtSearch.setText("");
+    }//GEN-LAST:event_btnResetActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -370,6 +392,7 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;
+    private javax.swing.JButton btnReset;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton ctkRiwayat;
     private javax.swing.JLabel jLabel1;

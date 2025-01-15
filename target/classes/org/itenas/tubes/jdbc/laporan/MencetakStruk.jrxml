@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="164" pageHeight="842" columnWidth="144" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="93e91c8a-b64d-4c7f-8d4e-ac31446784e9">
+	<property name="ireport.zoom" value="1.9487171000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="60"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+    t.idTransaksi,
+    t.tanggalTransaksi,
+    p.namaPegawai AS namaKasir,
+    b.judulBuku AS namaBarang,
+    d.jumlah,
+    d.hargaSatuan,
+    d.subtotal
+FROM 
+    transaksi t
+INNER JOIN 
+    datapegawai p ON t.idPegawai = p.idPegawai
+INNER JOIN 
+    detailTransaksi d ON t.idTransaksi = d.idTransaksi
+INNER JOIN 
+    dataBuku b ON d.noISBN = b.noISBN]]>
+	</queryString>
+	<field name="idTransaksi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggalTransaksi" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namaKasir" class="java.lang.String"/>
+	<field name="namaBarang" class="java.lang.String"/>
+	<field name="jumlah" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hargaSatuan" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="subtotal" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="6" width="144" height="73" uuid="d622a5a7-3121-4a67-8d51-c9a02912ec45"/>
+				<imageExpression><![CDATA["D:\\19. PBO\\00.Tubes\\TokoBuku\\src\\main\\resources\\org\\itenas\\tubes\\jdbc\\images\\Logo(OpsiLain).jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="58" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="38" width="142" height="10" uuid="ebe77e5f-d540-40cf-9a5c-8e8ec000b55a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Consolas" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggalTransaksi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
