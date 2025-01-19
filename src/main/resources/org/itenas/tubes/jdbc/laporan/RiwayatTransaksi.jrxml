@@ -62,49 +62,49 @@ ORDER BY
 		<band splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="21" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="89" height="20" backcolor="#CCCCFF" uuid="144ccea2-54fa-430a-9de1-856516ad251b"/>
+				<reportElement mode="Opaque" x="0" y="0" width="89" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="144ccea2-54fa-430a-9de1-856516ad251b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Tanggal Transaksi]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="89" y="0" width="89" height="20" backcolor="#CCCCFF" uuid="8b7222b2-c63f-4db8-b482-66599c8d536e"/>
+				<reportElement mode="Opaque" x="89" y="0" width="89" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="8b7222b2-c63f-4db8-b482-66599c8d536e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[ID Detail Transaksi]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="178" y="0" width="89" height="20" backcolor="#CCCCFF" uuid="78932e38-b162-41bc-b419-f5538c18bdcd"/>
+				<reportElement mode="Opaque" x="178" y="0" width="89" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="78932e38-b162-41bc-b419-f5538c18bdcd"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[ID Transaksi]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="267" y="0" width="89" height="20" backcolor="#CCCCFF" uuid="9265df93-10fb-479b-b8c4-96c0d0a90b65"/>
+				<reportElement mode="Opaque" x="267" y="0" width="89" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="9265df93-10fb-479b-b8c4-96c0d0a90b65"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[ID Pegawai]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="356" y="0" width="89" height="20" backcolor="#CCCCFF" uuid="c2a9566a-d004-494b-862c-08fbff4d12b7"/>
+				<reportElement mode="Opaque" x="356" y="0" width="89" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="c2a9566a-d004-494b-862c-08fbff4d12b7"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Nama Pegawai]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="445" y="0" width="89" height="20" backcolor="#CCCCFF" uuid="ddf89c8c-4814-4c51-94fb-0960657cc2d4"/>
+				<reportElement mode="Opaque" x="445" y="0" width="89" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="ddf89c8c-4814-4c51-94fb-0960657cc2d4"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[No ISBN]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="534" y="0" width="89" height="20" backcolor="#CCCCFF" uuid="f8acadc2-23f2-4bd5-8922-c08b93ad8a0f"/>
+				<reportElement mode="Opaque" x="534" y="0" width="89" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="f8acadc2-23f2-4bd5-8922-c08b93ad8a0f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Harga Satunya]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="623" y="0" width="89" height="20" backcolor="#CCCCFF" uuid="53b1abe9-9ad6-4d2b-b296-c649cb877f15"/>
+				<reportElement mode="Opaque" x="623" y="0" width="89" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="53b1abe9-9ad6-4d2b-b296-c649cb877f15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Jumlah Yang Dibeli]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="712" y="0" width="89" height="20" backcolor="#CCCCFF" uuid="7e269eb1-f427-46ba-9def-90e3f06cb746"/>
+				<reportElement mode="Opaque" x="712" y="0" width="89" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="7e269eb1-f427-46ba-9def-90e3f06cb746"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[SubTotal]]></text>
 			</staticText>

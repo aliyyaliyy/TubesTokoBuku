@@ -91,7 +91,7 @@ public class MenuOwner extends javax.swing.JFrame {
 
         btnRiwayat.setBackground(new java.awt.Color(44, 100, 133));
         btnRiwayat.setForeground(new java.awt.Color(231, 232, 231));
-        btnRiwayat.setText("Riwayat");
+        btnRiwayat.setText("Riwayat Transaksi");
         btnRiwayat.setPreferredSize(new java.awt.Dimension(318, 60));
         btnRiwayat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

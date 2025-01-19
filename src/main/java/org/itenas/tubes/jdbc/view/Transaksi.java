@@ -5,14 +5,28 @@ package org.itenas.tubes.jdbc.view;
  * @author MyBook Z Series
  */
 
+import java.io.InputStream;
+import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JREmptyDataSource;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.view.JasperViewer;
 import org.itenas.tubes.jdbc.model.DataBuku;
 import org.itenas.tubes.jdbc.repository.ControllerDataBuku;
 import org.itenas.tubes.jdbc.repository.ControllerDataBuku;
 import org.itenas.tubes.jdbc.repository.ControllerTransaksi;
+import org.itenas.tubes.jdbc.utils.ConnectionManager;
 
 
 public class Transaksi extends javax.swing.JFrame {
@@ -656,8 +670,9 @@ public class Transaksi extends javax.swing.JFrame {
                     System.out.println("Error: buku dengan judul '" + judulTransaksi + "' tidak ditemukan.");
                 }
             }
-           
-                
+          
+
+
             // Mereset data transaksi
             model.setRowCount(0);
             txtTotalKeseluruhan.setText("");

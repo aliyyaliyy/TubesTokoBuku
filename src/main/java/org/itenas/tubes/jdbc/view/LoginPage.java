@@ -31,7 +31,7 @@ public class LoginPage extends javax.swing.JFrame {
     
     //method buar ngeakses gambar yang ada di login 
     private void loadImage() {
-        URL imageUrl = getClass().getClassLoader().getResource("org/itenas/tubes/jdbc/images/Login.jpg");
+        URL imageUrl = getClass().getClassLoader().getResource("/org/itenas/tubes/jdbc/images/FixesLogo.png");
 
         if (imageUrl != null) {
             ImageIcon icon = new ImageIcon(imageUrl);  // Menggunakan URL gambar yang valid
@@ -61,7 +61,6 @@ public class LoginPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabelGambar = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         ComboBoxPosition = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
@@ -71,15 +70,12 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelGambar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(231, 232, 231));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 832));
-
-        jLabelGambar.setBackground(new java.awt.Color(204, 204, 204));
-        jLabelGambar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/itenas/tubes/jdbc/images/Login.jpg"))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(44, 100, 133));
@@ -136,28 +132,24 @@ public class LoginPage extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(44, 100, 133));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/itenas/tubes/jdbc/images/FixesLogo.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabelGambar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/itenas/tubes/jdbc/images/FixesLogo.png"))); // NOI18N
+        jLabelGambar.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabelGambar, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
+            .addComponent(jLabelGambar)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(328, 328, 328)
-                .addComponent(jLabelGambar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
@@ -201,8 +193,7 @@ public class LoginPage extends javax.swing.JFrame {
                                 .addGap(23, 23, 23)
                                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(865, 865, 865)
-                .addComponent(jLabelGambar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -300,7 +291,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> ComboBoxPosition;
     private javax.swing.JButton btnLogin;
     private javax.swing.JCheckBox cbShowPass;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

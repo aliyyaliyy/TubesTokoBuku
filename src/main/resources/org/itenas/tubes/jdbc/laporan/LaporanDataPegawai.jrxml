@@ -41,29 +41,29 @@
 	<columnHeader>
 		<band height="24" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="111" height="20" uuid="c28136ab-a2a0-4cf4-9bd2-a5a275b4185b"/>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="c28136ab-a2a0-4cf4-9bd2-a5a275b4185b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[IdPegawai]]></text>
+				<text><![CDATA[ID Pegawai]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="111" y="0" width="111" height="20" uuid="1b376a58-4a23-46e9-82d2-fdff793c98a1"/>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="1b376a58-4a23-46e9-82d2-fdff793c98a1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[namaPegawai]]></text>
+				<text><![CDATA[Nama Pegawai]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="222" y="0" width="111" height="20" uuid="f76107f6-3bc5-452f-a005-1874bc21b419"/>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="f76107f6-3bc5-452f-a005-1874bc21b419"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[email]]></text>
+				<text><![CDATA[Email]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="333" y="0" width="111" height="20" uuid="fc54e2c8-5a1c-4573-acd1-aac6606cda90"/>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="fc54e2c8-5a1c-4573-acd1-aac6606cda90"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[posisi]]></text>
+				<text><![CDATA[Posisi]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="444" y="0" width="111" height="20" uuid="dab7533d-4396-4440-8730-05cc68229a63"/>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#FFFFFF" backcolor="#2C6485" uuid="dab7533d-4396-4440-8730-05cc68229a63"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[password]]></text>
+				<text><![CDATA[Password]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
